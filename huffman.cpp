@@ -124,39 +124,7 @@ void Select(int &s1,int &s2,HFMTree &HT,int t){
 }
 
 
-/*int CountWeight(LinkList &L,Num *a){        //计算文件中各字符的频率 变成权重直接放入数组
-	LinkList p;
-	int w;
-	int i=1;
-	char j;
-	p=(LinkList)malloc(sizeof(LNode));
-	p=NULL;
-	printf("!");
-	while(L->data!=NULL){
-		w=1;
-		p=L->next;
-		j=p->data;									//j为判断 判断后面有没有相同的字符       这里!!!!!!!!!
-		while(p->data!=NULL){
-			if(j==p->next->data){					//如果有相同的字符 权重++ 把它从链表中删掉
-				++w;
-				p->next=p->next->next;
-			}		
-			p=p->next;
-		}
-		L->next=L->next->next;						//删除刚刚记录的字符 
-	 	a[i].data=j;
-		a[i].weight=w;
-/*		HT[i].chara=j;								//把记录的字符和权重放在树里
-		HT[i].lchild=0;
-		HT[i].rchild=0;
-		HT[i].parent=0;
-		HT[i].weight=w;
-		++i;										//记录有几个不同的字符
-	}
-	printf("?");
-	--i;
-	return i;
-}*/
+
 
 void CreateHFMTree(HFMTree &HT,int &m,int &n,Num l[]){
 	int i,s1,s2;
